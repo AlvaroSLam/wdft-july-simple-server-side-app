@@ -1,0 +1,15 @@
+<h1>Is this showing?</h1>
+{{!-- En vez de usar this. tenemos que usar result. Que es lo que nos devuelve TodoModel.findById(req.params.id) en get --}}
+    <p>{{result.name}}</p>
+    <p>{{result.description}}</p>
+
+{{!-- EDIT BUTTON --}}
+
+<a href="/todo/{{result._id}}/edit">
+    <button type="submit" class="btn btn-primary">Edit</button>
+</a>
+
+{{!-- DELETE BUTTON --}}
+<a href="/todo/{{result._id}}/delete">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</a>

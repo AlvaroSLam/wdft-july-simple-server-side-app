@@ -26,11 +26,14 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 // -------------DO NOT UNCOMMENT THIS------------
 //Use body parser. To be able parse post request information
-// const bodyParser = require('body-parser');
-// app.use(bodyParser.urlencoded({ extended: true }));
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 // ----------------------------------------------
 
 //Register Routes here
+
+let todoRoutes = require('./routes/Todo.routes')
+app.use('/', todoRoutes)
 
 
 //Start the server to begin listening on a port
